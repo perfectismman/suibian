@@ -8,10 +8,11 @@ GROUP BY d.department_name;
 �Ż����飺 ����������
 �Ż������� ��
 
-SELECT d.department_name,count(e.job_id)as "����������",
+* SELECT d.department_name,count(e.job_id)as "����������",
 avg(e.salary)as "ƽ������"
 FROM hr.departments d,hr.employees e
 WHERE d.department_id = e.department_id
 GROUP BY d.department_name
 HAVING d.department_name in ('IT','Sales');
+
 
